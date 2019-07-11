@@ -11,14 +11,20 @@
         <constructor-arg name="age" value="35"/>
     </bean>
 
-    <bean name="movieA,movieB" class="com.stackroute.domain.Movie">
-        <constructor-arg name="actor" ref="actortype"/>
+    <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName" scope="prototype">
+        <property name="actor" ref="actortype"></property>
+
     </bean>
 
-    <bean name="movie1,movie2" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg name="actor" ref="actortype"/>
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType" scope="prototype">
+        <property name="actor" ref="actortype"></property>
+
     </bean>
 
+    <bean id="movie2" class="com.stackroute.domain.Movie" autowire="constructor" scope="prototype">
+        <property name="actor" ref="actortype"></property>
+
+    </bean>
 
 
 </beans>
