@@ -20,20 +20,28 @@ public class Main {
     {
         //using application context
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("beans.xml" );
-        Movie movie1=applicationContext.getBean("movie",Movie.class);
+
+        //using scope as default type singleton
+        Movie movieA=applicationContext.getBean("movieA",Movie.class);
+        movieA.display();
+
+        Movie movieB=applicationContext.getBean("movieB",Movie.class);
+        movieB.display();
+
+        System.out.println(movieA==movieB);
+
+        //using scope as prototype
+        Movie movie1=applicationContext.getBean("movie1",Movie.class);
         movie1.display();
 
-        //using bean factory
-        XmlBeanFactory xmlBeanFactory=new XmlBeanFactory(new FileSystemResource("/home/pranathi/spring-xml-demo/src/main/resources/beans.xml"));
-        Movie movie2=xmlBeanFactory.getBean("movie",Movie.class);
+        Movie movie2=applicationContext.getBean("movie2",Movie.class);
         movie2.display();
 
-        //using beandefinitionregistry and beandefinitionreader
-        DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
-        BeanDefinitionReader beanDefinitionReader=new XmlBeanDefinitionReader(defaultListableBeanFactory);
-        beanDefinitionReader.loadBeanDefinitions(new FileSystemResource("src/main/resources/beans.xml"));
-        Movie movie3 = defaultListableBeanFactory.getBean("movie",Movie.class);
-        movie3.display();
+        System.out.println(movie1==movie2);
+
+
+
+
      }
     }
 
