@@ -29,10 +29,10 @@ public class Main {
         movie2.display();
 
         //using beandefinitionregistry and beandefinitionreader
-        DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
-        BeanDefinitionReader beanDefinitionReader=new XmlBeanDefinitionReader(defaultListableBeanFactory);
+        BeanDefinitionRegistry beanDefinitionRegistry = new DefaultListableBeanFactory();
+        BeanDefinitionReader beanDefinitionReader=new XmlBeanDefinitionReader(beanDefinitionRegistry);
         beanDefinitionReader.loadBeanDefinitions(new FileSystemResource("src/main/resources/beans.xml"));
-        Movie movie3 = defaultListableBeanFactory.getBean("movie",Movie.class);
+        Movie movie3 =((DefaultListableBeanFactory)beanDefinitionRegistry).getBean("movie",Movie.class);
         movie3.display();
      }
     }
