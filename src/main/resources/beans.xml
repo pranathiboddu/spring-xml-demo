@@ -5,6 +5,7 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+ <!--
   <bean id="actortype" class="com.stackroute.domain.Actor">
         <constructor-arg name="actorName" value="Shahid Kapoor"/>
         <constructor-arg name="gender" value="Male"/>
@@ -23,6 +24,8 @@
         <property name="actor" ref="actortype1"></property>
 
     </bean>
+    -->
+    <bean id="beanlifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
 
 
 </beans>
