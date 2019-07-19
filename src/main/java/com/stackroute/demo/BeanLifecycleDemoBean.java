@@ -3,7 +3,7 @@ package com.stackroute.demo;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class BeanLifecycleDemoBean implements InitializingBean , DisposableBean
+public class BeanLifecycleDemoBean implements InitializingBean , DisposableBean //initialized initializingbean and disposable bean
 {
 
     public void afterPropertiesSet() throws Exception
@@ -17,12 +17,12 @@ public class BeanLifecycleDemoBean implements InitializingBean , DisposableBean
         //System.out.println("disposable bean");
     }
 
-    public void customInit()
+    public void customInit() //initialized custom init
     {
         System.out.println("Method customInit() invoked...");
     }
 
-    public void customDestroy()
+    public void customDestroy() //initialized custom destroy
     {
         System.out.println("Method customDestroy() invoked...");
     }
