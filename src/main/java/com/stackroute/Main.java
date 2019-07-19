@@ -20,6 +20,7 @@ import org.springframework.core.io.FileSystemResource;
 public class Main {
     public static void main(String[] args)
     {
+        //used application context
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("beans.xml") ;
         Movie movie=applicationContext.getBean("movie",Movie.class);
         movie.display();
