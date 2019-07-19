@@ -1,13 +1,15 @@
 package com.stackroute.domain;
 
 public class Actor {
-    private String actorName,gender;
+    private String actorName,gender; //initialzed literals for actor class
     int age;
-    public void setActorName(String actorName) {
+    public void setActorName(String actorName) //done setter injection
+    {
         this.actorName = actorName;
     }
 
-    public void setGender(String gender) {
+    public void setGender(String gender) 
+    {
         this.gender = gender;
     }
 
