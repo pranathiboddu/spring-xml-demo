@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Actor {
 
-    private String actorName,gender;
+    private String actorName,gender; //initialzed literals for actor class
 
    /* public void setActorName(String actorName) {
         this.actorName = actorName;
@@ -20,7 +20,7 @@ public class Actor {
 
     int age;
 
-   public Actor(String actorName,String gender,int age)
+   public Actor(String actorName,String gender,int age) //initialed parameterized constructor
     {
         this.actorName=actorName;
         this.gender=gender;
