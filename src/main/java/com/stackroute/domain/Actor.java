@@ -1,9 +1,9 @@
 package com.stackroute.domain;
 
 public class Actor {
-    private String actorName,gender;
+    private String actorName,gender; //initialzed literals for actor class
     int age;
-    public Actor(String actorName,String gender,int age)
+    public Actor(String actorName,String gender,int age) //initialized parameterized constructor
     {
         this.actorName=actorName;
         this.gender=gender;
