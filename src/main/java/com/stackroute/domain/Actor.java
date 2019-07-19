@@ -6,7 +6,8 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Actor implements BeanNameAware, BeanFactoryAware {
+public class Actor implements BeanNameAware, BeanFactoryAware //implemented beanaware and beanfactory aware
+{
 
     private String actorName,gender;
 
@@ -35,7 +36,7 @@ public class Actor implements BeanNameAware, BeanFactoryAware {
         System.out.println("BeanNameAware " +s);
     }
 
-    public void setBeanFactory(BeanFactory beanFactory) throws BeansException
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException //implemented methods for interfaces
     {
         System.out.println("In BeanFactoryAware " +beanFactory);
     }
