@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Movie
 {
-    public Movie(Actor actor)
+    public Movie(Actor actor) //initialed parameterized constructor
     {
         this.actor=actor;
     }
@@ -13,13 +13,14 @@ public class Movie
 
     }
     Actor actor;
-    public void setActor(Actor actor) {
+    public void setActor(Actor actor) //implemented setter for actor
+    {
         this.actor = actor;
     }
 
 
 
-public void display()
+public void display() //calling actor class method
 {
     actor.displayActorInfo();
 }
