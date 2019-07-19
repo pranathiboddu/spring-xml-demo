@@ -20,13 +20,14 @@ public class Main {
     {
         //using application context
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("beans.xml" );
-
-        Movie movie=applicationContext.getBean("movie",Movie.class);
+       
+       //by name 
+          Movie movie=applicationContext.getBean("movie",Movie.class);
         movie.display();
-
+        //by type
         Movie movie1=applicationContext.getBean("movie1",Movie.class);
         movie1.display();
-
+//constructor
         Movie movie2=applicationContext.getBean("movie2",Movie.class);
         movie2.display();
 
