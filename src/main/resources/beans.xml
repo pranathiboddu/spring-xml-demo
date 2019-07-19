@@ -4,23 +4,23 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!-- created actor bean and used constructor injection-->
   <bean id="actortype" class="com.stackroute.domain.Actor">
         <constructor-arg name="actorName" value="Shahid Kapoor"/>
         <constructor-arg name="gender" value="Male"/>
         <constructor-arg name="age" value="35"/>
     </bean>
-
+<!-- created movie bean and used property type for setter method and autowire by name-->
     <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName" scope="prototype">
         <property name="actor" ref="actortype"></property>
 
     </bean>
-
+<!-- created movie bean and used property type for setter method and autowire by type-->
     <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType" scope="prototype">
         <property name="actor" ref="actortype"></property>
 
     </bean>
-
+<!-- created movie bean and used property type for setter method and autowire by constructor-->
     <bean id="movie2" class="com.stackroute.domain.Movie" autowire="constructor" scope="prototype">
         <property name="actor" ref="actortype"></property>
 
