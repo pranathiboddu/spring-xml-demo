@@ -4,13 +4,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!-- created actor bean and used property type for setter method-->
     <bean id="actortype" class="com.stackroute.domain.Actor">
         <property name="actorName" value="Shahid Kapoor"/>
         <property name="gender" value="Male"/>
         <property name="age" value="35"/>
     </bean>
-
+<!-- created movie beand and used property tag for setter method-->
     <bean id="movie" class="com.stackroute.domain.Movie">
         <property name="actor" ref="actortype"/>
     </bean>
