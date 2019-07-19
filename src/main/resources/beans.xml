@@ -4,7 +4,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!-- created actor bean and used constructor injection type  -->
   <bean id="actortype" class="com.stackroute.domain.Actor">
         <constructor-arg name="actorName" value="Shahid Kapoor"/>
         <constructor-arg name="gender" value="Male"/>
@@ -15,6 +15,7 @@
         <constructor-arg name="gender" value="Female"/>
         <constructor-arg name="age" value="35"/>
     </bean>
+       <!-- created movie bean and used property type for setter method and scope as prototype-->
 
     <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName" scope="prototype">
         <property name="actor" ref="actortype"></property>
